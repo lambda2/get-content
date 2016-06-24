@@ -1,0 +1,124 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/andral/.nvm/versions/node/v5.5.0/bin/node',
+1 verbose cli   '/Users/andral/.nvm/versions/node/v5.5.0/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.3.12
+3 info using node@v5.5.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/andral/Dev/web/get-content',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/andral/.npm/get-content/1.0.0/package.tgz not in flight; packing
+9 info lifecycle get-content@1.0.0~prepublish: get-content@1.0.0
+10 verbose lifecycle get-content@1.0.0~prepublish: unsafe-perm in lifecycle true
+11 verbose lifecycle get-content@1.0.0~prepublish: PATH: /Users/andral/.nvm/versions/node/v5.5.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/andral/Dev/web/get-content/node_modules/.bin:/Users/andral/.nvm/versions/node/v5.5.0/bin:/Users/andral/.rvm/gems/ruby-2.2.2/bin:/Users/andral/.rvm/gems/ruby-2.2.2@global/bin:/Users/andral/.rvm/rubies/ruby-2.2.2/bin:/usr/local/sbin:/usr/local/Cellar/php56/5.6.21/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/Library/TeX/texbin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/Users/andral/android-sdk:/Users/andral/android-sdk/tools:/Users/andral/.rvm/bin
+12 verbose lifecycle get-content@1.0.0~prepublish: CWD: /Users/andral/Dev/web/get-content
+13 silly lifecycle get-content@1.0.0~prepublish: Args: [ '-c', 'gulp prepublish' ]
+14 silly lifecycle get-content@1.0.0~prepublish: Returned: code: 0  signal: null
+15 verbose tar pack [ '/Users/andral/.npm/get-content/1.0.0/package.tgz',
+15 verbose tar pack   '/Users/andral/Dev/web/get-content' ]
+16 verbose tarball /Users/andral/.npm/get-content/1.0.0/package.tgz
+17 verbose folder /Users/andral/Dev/web/get-content
+18 verbose addLocalTarball adding from inside cache /Users/andral/.npm/get-content/1.0.0/package.tgz
+19 silly cache afterAdd get-content@1.0.0
+20 verbose afterAdd /Users/andral/.npm/get-content/1.0.0/package/package.json not in flight; writing
+21 verbose afterAdd /Users/andral/.npm/get-content/1.0.0/package/package.json written
+22 silly publish { name: 'get-content',
+22 silly publish   version: '1.0.0',
+22 silly publish   description: 'Fetch content of a url, a file, or even UNIX sockets.',
+22 silly publish   homepage: 'https://github.com/lambda2/get-content',
+22 silly publish   author:
+22 silly publish    { name: 'Andre Aubin',
+22 silly publish      email: 'andre.aubin@lamdaweb.fr',
+22 silly publish      url: 'andral.kiwi' },
+22 silly publish   files: [ 'dist' ],
+22 silly publish   main: 'dist/index.js',
+22 silly publish   keywords: [ 'fetch', 'content', 'url', 'file', 'get', 'request' ],
+22 silly publish   dependencies:
+22 silly publish    { expect: '^1.20.1',
+22 silly publish      'is-url': '^1.2.0',
+22 silly publish      promise: '^7.1.1',
+22 silly publish      request: '^2.72.0',
+22 silly publish      'request-promise': '^3.0.0' },
+22 silly publish   repository:
+22 silly publish    { type: 'git',
+22 silly publish      url: 'git+ssh://git@github.com/lambda2/get-content.git' },
+22 silly publish   tonicExampleFilename: 'example.js',
+22 silly publish   devDependencies:
+22 silly publish    { gulp: '^3.6.0',
+22 silly publish      'gulp-eslint': '^1.0.0',
+22 silly publish      'gulp-exclude-gitignore': '^1.0.0',
+22 silly publish      'gulp-istanbul': '^0.9.0',
+22 silly publish      'gulp-mocha': '^2.0.0',
+22 silly publish      'gulp-plumber': '^1.0.0',
+22 silly publish      'gulp-coveralls': '^0.1.0',
+22 silly publish      'gulp-babel': '^5.1.0',
+22 silly publish      del: '^2.0.2',
+22 silly publish      'babel-core': '^5.5.0',
+22 silly publish      isparta: '^3.0.3' },
+22 silly publish   scripts: { prepublish: 'gulp prepublish', test: 'gulp' },
+22 silly publish   license: 'MIT',
+22 silly publish   readme: '# get-content [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]\n> Fetch content of a url, a file, or even UNIX sockets.;\n\n\n## Install\n\n```sh\n$ npm install --save get-content\n```\n\n## Usage\n\n```js\nvar getContent = require(\'get-content\');\n\ngetContent.get(\'http://example.org\').then(function(response){\n  console.log(response); /* html content of http://example.org */\n})\n\ngetContent.get(\'./README.md\').then(function(response){\n  console.log(response); /* content of README.md file */\n})\n```\n\n## License\n\nMIT © [Andre Aubin](andral.kiwi)\n\n\n[npm-image]: https://badge.fury.io/js/get-content.svg\n[npm-url]: https://npmjs.org/package/get-content\n[travis-image]: https://travis-ci.org/lambda2/get-content.svg?branch=master\n[travis-url]: https://travis-ci.org/lambda2/get-content\n[daviddm-image]: https://david-dm.org/lambda2/get-content.svg?theme=shields.io\n[daviddm-url]: https://david-dm.org/lambda2/get-content\n[coveralls-image]: https://coveralls.io/repos/github/lambda2/get-content/badge.svg?branch=master\n[coveralls-url]: https://coveralls.io/github/lambda2/get-content?branch=master\n',
+22 silly publish   readmeFilename: 'README.md',
+22 silly publish   gitHead: 'dc8ce1aa9640da0e20ae0bf84601d15f961e6c0e',
+22 silly publish   bugs: { url: 'https://github.com/lambda2/get-content/issues' },
+22 silly publish   _id: 'get-content@1.0.0',
+22 silly publish   _shasum: '7625e6463590b610222dd356977f38e5b845601d',
+22 silly publish   _from: '.' }
+23 verbose getPublishConfig undefined
+24 silly mapToRegistry name get-content
+25 silly mapToRegistry using default registry
+26 silly mapToRegistry registry https://registry.npmjs.org/
+27 silly mapToRegistry uri https://registry.npmjs.org/get-content
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/andral/.npm/get-content/1.0.0/package.tgz
+30 verbose request uri https://registry.npmjs.org/get-content
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 12:49:38 AM
+33 verbose request using bearer token for auth
+34 verbose request id c5e8eb1b3e9a0220
+35 http request PUT https://registry.npmjs.org/get-content
+36 http 403 https://registry.npmjs.org/get-content
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Fri, 24 Jun 2016 22:49:39 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-fra1235-FRA',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1466808578.809159,VS0,VE956',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /Users/andral/.npm/registry.npmjs.org/get-content on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : get-content
+40 verbose stack     at makeError (/Users/andral/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/Users/andral/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+40 verbose stack     at Request._callback (/Users/andral/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+40 verbose stack     at Request.self.callback (/Users/andral/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/request/request.js:198:22)
+40 verbose stack     at emitTwo (events.js:100:13)
+40 verbose stack     at Request.emit (events.js:185:7)
+40 verbose stack     at Request.<anonymous> (/Users/andral/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+40 verbose stack     at emitOne (events.js:95:20)
+40 verbose stack     at Request.emit (events.js:182:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/Users/andral/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+41 verbose statusCode 403
+42 verbose pkgid get-content
+43 verbose cwd /Users/andral/Dev/web/get-content
+44 error Darwin 14.5.0
+45 error argv "/Users/andral/.nvm/versions/node/v5.5.0/bin/node" "/Users/andral/.nvm/versions/node/v5.5.0/bin/npm" "publish"
+46 error node v5.5.0
+47 error npm  v3.3.12
+48 error code E403
+49 error "You cannot publish over the previously published version 1.0.0." : get-content
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
