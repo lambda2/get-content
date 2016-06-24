@@ -11,15 +11,21 @@ $ npm install --save get-content
 ## Usage
 
 ```js
-var getContent = require('get-content');
+const { linkType, get } = require("get-content");
+const url = 'http://andral.kiwi';
+const type = linkType(url);
 
-getContent.get('http://example.org').then(function(response){
-  console.log(response); /* html content of http://example.org */
-})
+console.log(type); // 'url'
 
-getContent.get('./README.md').then(function(response){
+get(url).then((pageContent) => {
+  console.log(pageContent); // <html>\n\t<head>\n...'
+}).catch((err) => {
+  console.warn(err); // Something happen !
+});
+
+get('./README.md').then(function(response){
   console.log(response); /* content of README.md file */
-})
+});
 ```
 
 ## License
