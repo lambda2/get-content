@@ -1,4 +1,3 @@
-'use strict';
 var path = require('path');
 var gulp = require('gulp');
 var eslint = require('gulp-eslint');
@@ -26,8 +25,8 @@ gulp.task('static', function () {
 gulp.task('pre-test', function () {
   return gulp.src('lib/**/*.js')
     .pipe(istanbul({
-      includeUntested: true
-,      instrumenter: isparta.Instrumenter
+      includeUntested: true,
+      instrumenter: isparta.Instrumenter
     }))
     .pipe(istanbul.hookRequire());
 });

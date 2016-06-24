@@ -14,7 +14,13 @@ $ npm install --save get-content
 ```js
 var getContent = require('get-content');
 
-getContent('Rainbow');
+getContent.get('http://example.org').then(function(response){
+  console.log(response); # html content of http://example.org
+})
+
+getContent.get('./README.md').then(function(response){
+  console.log(response); # content of README.md file
+})
 ```
 
 ## License
