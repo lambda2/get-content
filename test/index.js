@@ -15,9 +15,11 @@ describe('linkType', function () {
 
   it('Reject invalid links', function () {
     let fileError = linkType('i_do_not_exists.txt');
+    let folderError = linkType('lib');
     let urlError = linkType('http:/invalidurl.com');
     expect(fileError).toEqual(false);
     expect(urlError).toEqual(false);
+    expect(folderError).toEqual(false);
   });
 });
 
@@ -35,6 +37,12 @@ describe('get', function () {
     });
   });
 
+  it('Throw exception on directory', function () {
+    expect(function () {
+      get('lib');
+    }).toThrow(/Unable to detect type of/);
+  });
+
   it('Throw exception on invalid file', function () {
     expect(function () {
       get('i_do_not_exists.txt');
@@ -45,5 +53,16 @@ describe('get', function () {
     expect(function () {
       get('http:/invalidurl.com');
     }).toThrow(/Unable to detect type of/);
+  });
+
+  it('Reject on invalid url', function () {
+    let errorHandler = expect.createSpy(function (e) {
+      expect(e.statusCode).toEqual(404);
+    });
+    Promise.all([get('https://github.com/lambda2/get-content/blob/master/not-exists').catch(errorHandler)])
+    .then(function () {
+      expect(errorHandler).toHaveBeenCalled();
+    });
+
   });
 });
