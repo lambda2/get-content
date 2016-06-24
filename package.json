@@ -1,6 +1,6 @@
 {
   "name": "get-content",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Fetch content of a url, a file, or even UNIX sockets.",
   "homepage": "https://github.com/lambda2/get-content",
   "author": {
