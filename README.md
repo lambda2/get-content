@@ -8,18 +8,17 @@
 $ npm install --save get-content
 ```
 
-
 ## Usage
 
 ```js
 var getContent = require('get-content');
 
 getContent.get('http://example.org').then(function(response){
-  console.log(response); # html content of http://example.org
+  console.log(response); /* html content of http://example.org */
 })
 
 getContent.get('./README.md').then(function(response){
-  console.log(response); # content of README.md file
+  console.log(response); /* content of README.md file */
 })
 ```
 
