@@ -1,6 +1,6 @@
 {
   "name": "get-content",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Fetch content of a url, a file, or even UNIX sockets.",
   "homepage": "https://github.com/lambda2/get-content",
   "author": {
@@ -21,15 +21,14 @@
     "request"
   ],
   "dependencies": {
-    "expect": "^1.20.1",
     "is-url": "^1.2.0",
     "promise": "^7.1.1",
-    "request": "^2.72.0",
     "request-promise": "^3.0.0"
   },
   "repository": "git@github.com:lambda2/get-content.git",
   "devDependencies": {
     "gulp": "^3.6.0",
+    "expect": "^1.20.1",
     "gulp-eslint": "^1.0.0",
     "gulp-exclude-gitignore": "^1.0.0",
     "gulp-istanbul": "^0.9.0",
