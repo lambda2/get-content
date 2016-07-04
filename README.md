@@ -30,7 +30,8 @@ get('./README.md').then(function(response){
 
 ## License
 
-MIT © [Andre Aubin](andral.kiwi)
+MIT © [Andre Aubin](http://andral.kiwi)
+
 
 
 [npm-image]: https://badge.fury.io/js/get-content.svg
